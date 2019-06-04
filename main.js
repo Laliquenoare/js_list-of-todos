@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <tr>
             <td>${item.title}</td>
             <td><a href=${userNames[item.userId - 1].email}>${userNames[item.userId - 1].name}</a></td>
-            <td>${item.completed}</td>
+            <td class="${item.completed === true ? "completed" : "in-process"}">${item.completed === true ? "Completed" : "In process"}</td>
           </tr>`).join('')}
         </tbody>
       </table>
